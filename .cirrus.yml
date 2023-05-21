@@ -25,23 +25,20 @@ task:
   
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
-      - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-      - ssh-keyscan -H gitlab.com >> ~/.ssh/known_hosts
-      - ssh-keyscan -H "${GITLAB_INSTANCE}" >> ~/.ssh/known_hosts
-      - echo "${PRIV_SSH_KEY}" > ~/.ssh/id_ed25519
-      - chmod 600 ~/.ssh/id_ed25519
+      - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+      - ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+      - echo "$PRIV_SSH_KEY" > ~/.ssh/id_rsa
+      - chmod 600 ~/.ssh/id_rsa
 
   Setup_script:
       - git config --global user.name "Sushrut1101"
       - git config --global user.email "guptasushrut@gmail.com"
-      - git config --global color.ui auto
-      - cd ~/DumprX
-      - echo "${GITLAB_TOKEN}" > .gitlab_token
-      - echo "${GITLAB_GROUP}" > .gitlab_group
-      - echo "${TG_CHAT}" > .tg_chat
-      - echo "${TG_TOKEN}" > .tg_token
-      - echo "${GITLAB_INSTANCE}" > .gitlab_instance
-      - bash setup.sh
+      - cd DumprX
+      - echo "$GITLAB_TOKEN" > .gitlab_token
+      - echo "$GITLAB_GROUP" > .gitlab_group
+      - echo "$TG_CHAT" > .tg_chat
+      - echo "$TG_TOKEN" > .tg_token
+      - sudo bash setup.sh
 
   DumprX_script:
       - cd ~/DumprX
