@@ -20,7 +20,7 @@ task:
       memory: 16G
 
   Clone_script:
-      - git clone --depth=1 --single-branch https://github.com/fw-dumps/DumprX.git
+      - git clone --depth=1 --single-branch https://github.com/DumprX/DumprX/tree/ddef53e623fd6b0f8ffd5ad863d3892ad03df706
   
   Set-SSH-Keys_script:
       - mkdir -p ~/.ssh
