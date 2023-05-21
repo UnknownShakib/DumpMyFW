@@ -2,9 +2,11 @@
 Dump Android ROMs/Firmwares Online, via a PR, for free!
 
 ## How to Dump? ##
-1. Update ```ROM_URL.txt``` with the direct link of the ROM/Firmware and Make a PR.
-2. As soon as you make a PR, the Dumping Should Start Automatically.
-3. If the Dumping is Successful, you'll see a post at out Channel, [@DumprXDumps](https://t.me/DumprXDumps) on Telegram.
+1. Install the Free ($0) Plan of [Cirrus CI](https://github.com/marketplace/cirrus-ci)
+2. Allow All the Permissions from [Here](https://github.com/apps/cirrus-ci/installations/new)
+3. Fork [this Repo](https://github.com/OrangeFoxRecovery/OrangeFox-CI.git).
+4. Update the ```config.sh``` (and ```.cirrus.yml``` for telegram vars) According to your Needs and push a commit.
+5. Go to [cirrus-ci.com](https://cirrus-ci.com) And see the Build Logs.
 
 ## Notes ##
 - If the Dump is Successful, you'll see a post on our Telegram Channel, [@DumprXDumps](https://t.me/DumprXDumps)
